@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <EditText
+        android:id="@+id/nameEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:alpha="0.5"
+        android:ems="10"
+        android:hint="@string/account" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/pwEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameEdit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:alpha="0.5"
+        android:ems="10"
+        android:hint="@string/password" />
+
+    <Button
+        android:id="@+id/loginBu"
+        android:layout_width="214dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/pwEdit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/contact_commit_down"
+        android:text="@string/login"
+        android:textColor="#ffffffff" />
+
+    <Button
+        android:id="@+id/registeBu"
+        android:layout_width="214dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/loginBu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/contact_commit_down"
+        android:text="@string/resigte"
+        android:textColor="#ffffffff" />
+
+</RelativeLayout>

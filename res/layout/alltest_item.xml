@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/default_list_item_height"
+    android:background="@color/background"
+    android:paddingTop="8dp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/default_head" />
+
+    <TextView
+        android:id="@+id/ddlText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/icon"
+        android:layout_alignLeft="@+id/nameText"
+        android:text="测试截至时间:"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ddlText"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/icon"
+        android:text="应用名称"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/pubText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/downView"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/downView"
+        android:text="发布人"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/downView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/icon"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/essense_down" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/icon"
+        android:layout_below="@+id/icon"
+        android:layout_marginTop="8dp"
+        android:text="项目功能描述前20字"
+        android:textColor="#000000" />
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Kikbug</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="account">账号</string>
+    <string name="password">密码</string>
+    <string name="login">登录</string>
+    <string name="resigte">注册</string>
+    <string name="title_activity_func">FuncActivity</string>
+    <string name="etc_func_describe">一款跨平台的通讯工具。支持单人、多人参与。通过手机网络发送语音、图片、视频和文字。</string>
+    <string name="etc_requirement">当我们对产品的信息结构了解后，我们就需要规整脑海中的产品需求，让想法更加结构化，因此这一步是梳理产品的需求。我们首先要罗列出产品的频道及页面(产品结构图)，其次再基于产品结构图梳理出频道及页面中的功能，并延伸构建出用户的操作流程(用户流程图)。
+
+以上两步是为了让我们在撰写产品需求文档之前能够对产品有一个全面的了解，类似鸟瞰式的一目了然，也方便调整完善。</string>
+    <string name="etc_test_requirement">当我们逐渐清晰了产品的需求后，并梳理了产品的各个频道及页面，那么这一步就要开始验证这些想法的具体界面表现和方案的可行性了。
+
+首先我建议通过手绘的形式快速在草纸上绘制出产品的原型，推演和讨论方案的可行性，当有一定的进展之后，我们再通过软件工具进行更深入的设计。移动产品可以考虑灰模原型，网站产品可以考虑交互原型，对于这两种原型方式，无论是移动产品还是网站产品都可以使用，具体取得于你的个人习惯和团队要求。</string>
+
+</resources>

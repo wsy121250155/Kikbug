@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#ffffff</color>
+    <color name="default_headbar_background">#2e2e45</color>
+    <color name="default_headbar_title">#ffffff</color>
+    <color name="default_float_back">#7f000000</color>
+
+</resources>
