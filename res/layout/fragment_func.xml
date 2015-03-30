@@ -51,4 +51,6 @@
         </LinearLayout>
     </TabHost>
 
+    <include layout="@layout/menu_right_bottom" />
+
 </RelativeLayout>

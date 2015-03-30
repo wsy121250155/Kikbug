@@ -46,9 +46,13 @@ public class AllTestDetailFragment extends Fragment {
 				super.handleMessage(msg);
 				int fileSize = msg.getData().getInt(DownTask.FILESIZE);
 				int bytesDL = msg.getData().getInt(DownTask.DOWNSIZE);
-				downText.setText(""
-						+ (int) ((bytesDL * 1.0) / (fileSize * 1.0) * 100)
-						+ "%");
+				if (bytesDL != fileSize) {
+					downText.setText(""
+							+ (int) ((bytesDL * 1.0) / (fileSize * 1.0) * 100)
+							+ "%");
+				} else {
+					downText.setText("下载完成");
+				}
 			}
 		};
 		bottombar.setOnClickListener(new OnClickListener() {

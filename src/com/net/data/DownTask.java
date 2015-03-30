@@ -42,6 +42,10 @@ public class DownTask {
 				.getSystemService(Context.DOWNLOAD_SERVICE);
 	}
 
+	public void quit() {
+		downloadManager.remove(downloadId);
+	}
+
 	public void down() {
 		// check file
 		File f = new File(savePath);
