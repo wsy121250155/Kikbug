@@ -3,7 +3,8 @@ package com.func.kikbug;
 import java.io.File;
 
 import com.local.data.AppConfig;
-import com.net.data.DataUtils;
+import com.net.data.ApkMaps;
+import com.net.data.DataConfig;
 
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
@@ -19,7 +20,7 @@ public class CompleteReceiver extends BroadcastReceiver {
 		Log.i("CompleteReceiver", "download over");
 		Toast.makeText(context, "下载成功", AppConfig.HINT_TIME).show();
 		long id = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
-		String filePath = DataUtils.getPath(id);
+		String filePath = ApkMaps.getInstance().getPath(id);
 		Log.i("CompleteReceiver", filePath);
 		File _file = new File(filePath);
 		if (!_file.exists()) {

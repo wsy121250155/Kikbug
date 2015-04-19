@@ -5,8 +5,11 @@ public class Sys {
 		try {
 			throw new Exception(info);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	public static long getTime() {
+		return System.currentTimeMillis();
 	}
 }

@@ -3,6 +3,7 @@ package com.func.kikbug;
 import com.func.adapter.AllTestAdapter;
 import com.func.adapter.MyTestAdapter;
 import com.func.adapter.ReportAdapter;
+import com.net.data.RegisterTask;
 import com.view.util.ArcMenu;
 import com.view.util.ArcMenu.OnMenuItemClickListener;
 import com.view.util.ReFlashListView;
