@@ -3,7 +3,7 @@ package com.func.kikbug;
 import com.func.adapter.AllTestAdapter;
 import com.func.adapter.MyTestAdapter;
 import com.func.adapter.ReportAdapter;
-import com.net.data.RegisterTask;
+import com.net.data.TaskFetchTask;
 import com.view.util.ArcMenu;
 import com.view.util.ArcMenu.OnMenuItemClickListener;
 import com.view.util.ReFlashListView;
@@ -39,6 +39,7 @@ public class FuncFragment extends Fragment {
 			initTabs(rootView);
 			initLists(rootView);
 		}
+		new TaskFetchTask(0, 10).execute("");
 		return rootView;
 	}
 

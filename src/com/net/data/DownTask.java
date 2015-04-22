@@ -10,7 +10,6 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 
 import com.local.data.ContentUtils;
 import com.local.data.FileUtils;
@@ -32,14 +31,18 @@ public class DownTask {
 	private long downloadId;
 	private Handler handler;
 
-	public DownTask(Context context, Handler handler, String appName) {
+	public DownTask(Context context, Handler handler, String apkUrl,
+			String appName) {
 		contextReference = new WeakReference<Context>(context);
-		this.appName = appName;
 		this.handler = handler;
-		if (!appName.endsWith(".apk")) {
-			Sys.error("apk name error");
+		this.apkUrl = apkUrl;
+		this.appName = appName;
+		if (appName.equals("")) {
+			appName = Sys.getTime() + ".apk";
 		}
-		apkUrl = DataConfig.urlPrefix + appName;
+		if (!appName.endsWith(".apk")) {
+			appName += ".apk";
+		}
 		folderName = FileUtils.isFolderExist(DataConfig.folder_name);
 		savePath = folderName + "/" + appName;
 		observer = new DownloadChangeObserver(null);

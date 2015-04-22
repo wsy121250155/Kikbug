@@ -59,7 +59,7 @@ public class AllTestDetailFragment extends Fragment {
 			@Override
 			public void onClick(View v) {
 				downText.setText("正在下载");
-				DownTask task = new DownTask(getActivity(), myHandler,
+				DownTask task = new DownTask(getActivity(), myHandler, "url",
 						"HiMarket4.5.3_0226153319_1.apk");
 				task.down();
 			}

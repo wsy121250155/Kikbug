@@ -23,5 +23,8 @@
     <string name="phone">手机号</string>
     <string name="wechat">微信号</string>
     <string name="commit">提交</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_task_detail">TaskDetailActivity</string>
+    <string name="title_activity_person">PersonActivity</string>
 
 </resources>

@@ -1,5 +1,6 @@
 package com.func.kikbug;
 
+import com.local.data.UserInfo;
 import com.net.data.KikLoginTask;
 import com.net.data.KikLoginTask.LoginListener;
 import com.squareup.picasso.Picasso;
@@ -9,12 +10,14 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageView;
 
 public class FirstActivity extends Activity {
+	private static final String TAG = FirstActivity.class.getName();
 	private View loginBu, registeBu;
 	private ImageView background;
 	private EditText nameEdit, pwEdit;
@@ -51,11 +54,13 @@ public class FirstActivity extends Activity {
 
 	private void initLoginBu() {
 		loginBu = findViewById(R.id.loginBu);
+		nameEdit.setText(UserInfo.getInstance().getAccount());
+		pwEdit.setText(UserInfo.getInstance().getPassword());
 		loginBu.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				String account = nameEdit.getText().toString();
-				String pw = pwEdit.getText().toString();
+				final String account = nameEdit.getText().toString();
+				final String pw = pwEdit.getText().toString();
 				if (account.equals("")) {
 					SysCall.toast(getContext(), "账号不能为空");
 					return;
@@ -66,9 +71,12 @@ public class FirstActivity extends Activity {
 					public void result(int code, int msg) {
 						if (KikLoginTask.CODE_SUCCESS == code) {
 							// login success
+							UserInfo.getInstance().setAccount(account);
+							UserInfo.getInstance().setPassword(pw);
 							Intent intent = new Intent(FirstActivity.this,
-									FuncActivity.class);
+									MainActivity.class);
 							startActivity(intent);
+							finish();
 						} else if (KikLoginTask.CODE_VERIFY == code) {
 							SysCall.toast(getContext(), "密码错误");
 							return;
@@ -84,7 +92,8 @@ public class FirstActivity extends Activity {
 								SysCall.toast(getContext(), "账号被禁用");
 								break;
 							default:
-								SysCall.toast(getContext(), "发生未知错误");
+								SysCall.toast(getContext(), "错误代码：" + code
+										+ "-" + msg);
 								break;
 							}
 						}
