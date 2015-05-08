@@ -65,6 +65,10 @@
             android:name=".PersonActivity"
             android:label="@string/title_activity_person" >
         </activity>
+        <activity
+            android:name=".CaseDetailActivity"
+            android:label="@string/title_activity_case_detail" >
+        </activity>
     </application>
 
 </manifest>

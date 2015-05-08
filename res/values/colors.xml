@@ -5,5 +5,6 @@
     <color name="default_headbar_background">#2e2e45</color>
     <color name="default_headbar_title">#ffffff</color>
     <color name="default_float_back">#7f000000</color>
+    <color name="default_text_color">#000000</color>
 
 </resources>
