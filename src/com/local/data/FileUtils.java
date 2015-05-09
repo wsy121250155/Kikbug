@@ -11,4 +11,9 @@ public class FileUtils {
 				.mkdirs();
 		return folder.getAbsolutePath();
 	}
+
+	public static String getNameFromPath(String path) {
+		String[] parts = path.split("/");
+		return parts[parts.length - 1];
+	}
 }
