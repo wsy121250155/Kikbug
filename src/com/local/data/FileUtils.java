@@ -12,6 +12,14 @@ public class FileUtils {
 		return folder.getAbsolutePath();
 	}
 
+	public static boolean isFile(String path) {
+		File file = Environment.getExternalStoragePublicDirectory(path);
+		if (file.exists() && file.isFile()) {
+			return true;
+		}
+		return false;
+	}
+
 	public static String getNameFromPath(String path) {
 		String[] parts = path.split("/");
 		return parts[parts.length - 1];
