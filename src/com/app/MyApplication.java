@@ -16,12 +16,12 @@ public class MyApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
+		UserInfo.getInstance().init(getApplicationContext());
 		// 清空上次的登陆信息
-		UserInfo.getInstance().setToken(null);
+		UserInfo.getInstance().setToken("");
 		UserInfo.getInstance().setSsid(0);
 		UserInfo.getInstance().setTimeOut(0);
 
-		UserInfo.getInstance().init(getApplicationContext());
 		resolution = getDisplayMetrics(getApplicationContext());
 	}
 

@@ -1,17 +1,17 @@
 package com.sys.utils;
 
-import android.content.Context;
-import android.util.DisplayMetrics;
-
 public class Sys {
+	// 操作系统版本号
 	public static String getRelease() {
 		return android.os.Build.VERSION.RELEASE;
 	}
 
+	// 获取手机的型号 设备名称
 	public static String getModel() {
 		return android.os.Build.MODEL;
 	}
 
+	// 厂商
 	public static String getManufacturer() {
 		return android.os.Build.MANUFACTURER;
 	}
