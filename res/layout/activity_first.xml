@@ -54,4 +54,13 @@
         android:text="@string/registe"
         android:textColor="#ffffffff" />
 
+    <ImageView
+        android:id="@+id/moocView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registeBu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/mooc" />
+
 </RelativeLayout>

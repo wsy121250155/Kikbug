@@ -10,7 +10,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -21,6 +20,7 @@ public class FirstActivity extends Activity {
 	private View loginBu, registeBu;
 	private ImageView background;
 	private EditText nameEdit, pwEdit;
+	private View moocView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,19 @@ public class FirstActivity extends Activity {
 		initBackground();
 		initLoginBu();
 		initRegisterBu();
+		initMoocView();
+	}
+
+	private void initMoocView() {
+		moocView = findViewById(R.id.moocView);
+		moocView.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(FirstActivity.this,
+						MoocActivity.class);
+				startActivity(intent);
+			}
+		});
 	}
 
 	private void initBackground() {

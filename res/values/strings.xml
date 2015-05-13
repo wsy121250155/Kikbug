@@ -27,5 +27,6 @@
     <string name="title_activity_task_detail">TaskDetailActivity</string>
     <string name="title_activity_person">PersonActivity</string>
     <string name="title_activity_case_detail">CaseDetailActivity</string>
+    <string name="title_activity_mooc">MoocActivity</string>
 
 </resources>

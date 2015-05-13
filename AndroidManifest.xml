@@ -76,6 +76,10 @@
             android:name=".CaseDetailActivity"
             android:label="@string/title_activity_case_detail" >
         </activity>
+        <activity
+            android:name=".MoocActivity"
+            android:label="@string/title_activity_mooc" >
+        </activity>
     </application>
 
 </manifest>
